@@ -1,17 +1,26 @@
-//import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import './App.css';
-import './index.css';
+import funciones from "./funciones"
+import {Button, Table} from "@material-ui/core"
+import Padre from "./componentd/padre";
+import Botones from "./Botones";
 
 
 function App() {
+  
   return (
  <>
   <div className="container">
+    
         <div className="row mt-3">
             <div className="col">
                 <h2>Listado de datos</h2>
                 <div className="my-3">
                     <table className="table" id="lista-usuarios">
+                    <Button className="Mostrar" variant="contained" color="secundary" >
+                      Mostrar agenda
+                    </Button>
+                    <Button variant="text" color="default" onClick={alert("Vaya al codigo")}>
+                      Agregar contactos
+                    </Button>
                         <thead>
                             <tr>
                                 <th scope="col">Nombre</th>
@@ -19,6 +28,7 @@ function App() {
                                 <th scope="col">Telefono</th>
                                
                             </tr>
+                            
                         </thead>
                         <tbody>
                         </tbody>
@@ -27,13 +37,19 @@ function App() {
             </div>
         </div>
     </div>
-
-    
  </>
+ 
   );
+  
 }
 
+
+
 export default App;
+
+
+
+
 
 
 /*   <div className="App">
